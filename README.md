@@ -4,6 +4,8 @@ Code and result files for the manuscript
 
 > N. Aslam, G. Mustafa, A. N. Qureshi, U. A. Raza. *Guidance versus Confinement: What Anatomical Supervision of Grad-CAM Does and Does Not Change.* Manuscript under review.
 
+Software archive: [doi:10.5281/zenodo.23217035](https://doi.org/10.5281/zenodo.23217035) (v1.0.0; all versions: [doi:10.5281/zenodo.23217034](https://doi.org/10.5281/zenodo.23217034)).
+
 The package trains tuberculosis chest X-ray classifiers with and without spatial supervision of Grad-CAM, evaluates them in-domain and across datasets (Shenzhen ↔ Montgomery), and measures how much each model actually relies on the lungs. Two commands run every experiment in the paper (336 training runs: ResNet-50 and ConvNeXt-Tiny, two datasets, eight seeds). The result CSVs in `results/` rebuild every table and figure without a GPU.
 
 Contents:
@@ -148,4 +150,4 @@ Checkpoints and per-seed training logs (`results/<method>/<dataset>/<arch>/per_s
 
 ## License and citation
 
-MIT License (see `LICENSE`). If you use this code, please cite the software record (see `CITATION.cff`) and the paper.
+MIT License (see `LICENSE`). If you use this code, please cite the software record, https://doi.org/10.5281/zenodo.23217035 (see `CITATION.cff`), and the paper.

@@ -5,7 +5,8 @@ version: 1.0.0
 date-released: 2026-10-07
 license: MIT
 type: software
-# doi: 10.5281/zenodo.XXXXXXX   <- add after Zenodo assigns the DOI
+doi: 10.5281/zenodo.23217035
+repository-code: "https://github.com/numanaslam/agloss"
 authors:
   - family-names: Aslam
     given-names: Numan
