@@ -2,7 +2,7 @@
 
 Code and result files for the manuscript
 
-> N. Aslam, G. Mustafa, A. N. Qureshi, U. A. Raza. *Guidance versus Confinement: What Anatomical Supervision of Grad-CAM Does and Does Not Change.* Manuscript under review.
+> N. Aslam, G. Mustafa, A. N. Qureshi. *Guidance versus Confinement: What Anatomical Supervision of Grad-CAM Does and Does Not Change.* Manuscript under review.
 
 Software archive: [doi:10.5281/zenodo.23217035](https://doi.org/10.5281/zenodo.23217035) (v1.0.0; all versions: [doi:10.5281/zenodo.23217034](https://doi.org/10.5281/zenodo.23217034)).
 

@@ -18,9 +18,6 @@ authors:
   - family-names: Qureshi
     given-names: Adnan N.
     affiliation: "Department of Computer Sciences, Newman University, Birmingham, United Kingdom"
-  - family-names: Raza
-    given-names: Usman Ahmed
-    affiliation: "Department of Computational Intelligence, University of Naples Federico II, Naples, Italy"
 keywords:
   - tuberculosis classification
   - chest X-ray

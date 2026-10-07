@@ -197,7 +197,7 @@ SUPP = r"""\documentclass[10pt]{article}
 \begin{center}
 {\Large\bfseries Supplementary Material}\\[4pt]
 {\large Guidance versus Confinement: What Anatomical Supervision of Grad-CAM Does and Does Not Change}\\[4pt]
-Numan Aslam, Ghulam Mustafa, Adnan N. Qureshi and Usman Ahmed Raza
+Numan Aslam, Ghulam Mustafa and Adnan N. Qureshi
 \end{center}
 \noindent All values are mean $\pm$ 1 SD across 8 random seeds. ``Transfer'' rows evaluate on the full other dataset.
 
