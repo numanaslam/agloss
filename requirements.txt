@@ -1,0 +1,9 @@
+# Install PyTorch FIRST with the CUDA build that supports the RTX 50-series (see README):
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
+numpy
+pillow
+scikit-learn
+scipy
+pandas
+matplotlib
+pytest

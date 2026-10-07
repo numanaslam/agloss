@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "agloss: code and results for \"Guidance versus Confinement: What Anatomical Supervision of Grad-CAM Does and Does Not Change\""
+version: 1.0.0
+date-released: 2026-10-07
+license: MIT
+type: software
+# doi: 10.5281/zenodo.XXXXXXX   <- add after Zenodo assigns the DOI
+authors:
+  - family-names: Aslam
+    given-names: Numan
+    affiliation: "Department of Computer Sciences, University of Central Punjab, Lahore, Pakistan"
+    orcid: "https://orcid.org/0009-0007-7591-0577"
+  - family-names: Mustafa
+    given-names: Ghulam
+    affiliation: "Department of Computer Sciences, University of Central Punjab, Lahore, Pakistan"
+  - family-names: Qureshi
+    given-names: Adnan N.
+    affiliation: "Department of Computer Sciences, Newman University, Birmingham, United Kingdom"
+  - family-names: Raza
+    given-names: Usman Ahmed
+    affiliation: "Department of Computational Intelligence, University of Naples Federico II, Naples, Italy"
+keywords:
+  - tuberculosis classification
+  - chest X-ray
+  - explainable artificial intelligence
+  - Grad-CAM
+  - anatomical guidance

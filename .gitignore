@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+cache/
+data/
+results_quick/
+*.pt
+results/**/per_seed.csv
+results/**/seed_*_history.json
+results/errors.log
+paper_tables/tables/
+paper_tables/supplementary.tex

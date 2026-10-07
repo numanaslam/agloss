@@ -1,0 +1,24 @@
+{
+  "upload_type": "software",
+  "title": "agloss: code and results for \"Guidance versus Confinement: What Anatomical Supervision of Grad-CAM Does and Does Not Change\"",
+  "version": "1.0.0",
+  "description": "<p>PyTorch code and result files for the manuscript <em>Guidance versus Confinement: What Anatomical Supervision of Grad-CAM Does and Does Not Change</em> (under review).</p><p>The package <code>agloss</code> trains tuberculosis chest X-ray classifiers (ResNet-50, ConvNeXt-Tiny) with and without spatial supervision of Grad-CAM: anatomical guidance (the Anatomical Guidance loss), anatomical confinement (Tversky), and their ablations. It runs the full experiment grid (336 training runs: two datasets, eight seeds), the cross-dataset transfer evaluation, and the reliance analyses (occlusion, region ablation, deletion-insertion). Two commands reproduce every experiment; the included result CSVs reproduce every table and figure without a GPU.</p><p>The Shenzhen and Montgomery County datasets and the Shenzhen lung masks are not included; they are publicly available from the U.S. National Library of Medicine and Kaggle (see README).</p>",
+  "creators": [
+    {"name": "Aslam, Numan", "affiliation": "Department of Computer Sciences, University of Central Punjab, Lahore, Pakistan", "orcid": "0009-0007-7591-0577"},
+    {"name": "Mustafa, Ghulam", "affiliation": "Department of Computer Sciences, University of Central Punjab, Lahore, Pakistan"},
+    {"name": "Qureshi, Adnan N.", "affiliation": "Department of Computer Sciences, Newman University, Birmingham, United Kingdom"},
+    {"name": "Raza, Usman Ahmed", "affiliation": "Department of Computational Intelligence, University of Naples Federico II, Naples, Italy"}
+  ],
+  "keywords": [
+    "tuberculosis classification",
+    "chest X-ray",
+    "explainable artificial intelligence",
+    "Grad-CAM",
+    "anatomical guidance",
+    "cross-dataset generalization",
+    "PyTorch"
+  ],
+  "license": "MIT",
+  "access_right": "open",
+  "language": "eng"
+}
