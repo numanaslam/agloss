@@ -37,20 +37,26 @@ def _ms(df, method, ds, col):
 
 
 def bars(df, ds, path):
-    metrics = [("testAUC", "Test AUC"), ("energyRatio", "Energy Ratio"),
-               ("pointingGame", "Pointing Game"), ("camIoU", "CAM-IoU")]
+    metrics = [("testAUC", "Test AUC", "AUC"), ("energyRatio", "Energy Ratio", "Energy Ratio"),
+               ("pointingGame", "Pointing Game", "Pointing Game score"), ("camIoU", "CAM-IoU", "CAM-IoU")]
     methods = [m for m in MAIN if m in set(df.method)]
-    fig, axes = plt.subplots(1, 4, figsize=(15, 3.6))
-    for ax, (col, title) in zip(axes, metrics):
+    # 2 x 2 panels so that labels stay legible at page width
+    fig, axes = plt.subplots(2, 2, figsize=(11, 8))
+    for k, (ax, (col, title, ylabel)) in enumerate(zip(axes.flat, metrics)):
         ms = [_ms(df, m, ds, col) for m in methods]
-        ax.bar(range(len(methods)), [a for a, _ in ms], yerr=[b for _, b in ms], capsize=3,
+        ax.bar(range(len(methods)), [a for a, _ in ms], yerr=[b for _, b in ms], capsize=4,
                color=[COLORS[m] for m in methods])
         ax.set_xticks(range(len(methods)))
-        ax.set_xticklabels([DISPLAY[m] for m in methods], rotation=40, ha="right", fontsize=8)
-        ax.set_title(title, fontweight="bold")
+        ax.set_xticklabels([DISPLAY[m] for m in methods], rotation=30, ha="right", fontsize=11)
+        ax.set_title(f"({'abcd'[k]}) {title}", fontweight="bold", fontsize=13)
+        ax.set_ylabel(f"{ylabel} (mean $\\pm$ SD)", fontsize=12)
+        ax.tick_params(axis="y", labelsize=11)
         ax.set_ylim(0, 1.05)
         ax.grid(axis="y", alpha=0.3)
-    fig.tight_layout()
+    handles = [plt.Rectangle((0, 0), 1, 1, color=COLORS[m]) for m in methods]
+    fig.legend(handles, [DISPLAY[m] for m in methods], loc="upper center", ncol=len(methods),
+               fontsize=11, frameon=False, bbox_to_anchor=(0.5, 1.02))
+    fig.tight_layout(rect=(0, 0, 1, 0.96))
     fig.savefig(path, bbox_inches="tight")
     plt.close(fig)
 

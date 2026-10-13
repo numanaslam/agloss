@@ -3,7 +3,28 @@ from __future__ import annotations
 
 import numpy as np
 import torch
-from sklearn.metrics import roc_auc_score
+
+
+def roc_auc_score(y_true, scores) -> float:
+    """ROC AUC as the Mann-Whitney statistic with average ranks for ties.
+    Identical to sklearn.metrics.roc_auc_score for binary labels; numpy only, so it also works
+    where compiled scikit-learn extensions cannot be loaded."""
+    y = np.asarray(y_true).ravel().astype(bool)
+    s = np.asarray(scores, dtype=np.float64).ravel()
+    n_pos, n_neg = int(y.sum()), int((~y).sum())
+    if n_pos == 0 or n_neg == 0:
+        raise ValueError("ROC AUC needs both classes")
+    order = np.argsort(s, kind="mergesort")
+    sorted_s = s[order]
+    ranks = np.empty(len(s), dtype=np.float64)
+    i = 0
+    while i < len(s):                                   # average rank within each block of ties
+        j = i
+        while j + 1 < len(s) and sorted_s[j + 1] == sorted_s[i]:
+            j += 1
+        ranks[order[i:j + 1]] = (i + j) / 2.0 + 1.0
+        i = j + 1
+    return float((ranks[y].sum() - n_pos * (n_pos + 1) / 2.0) / (n_pos * n_neg))
 
 
 def classification_metrics(y_true: np.ndarray, p_tb: np.ndarray) -> dict:
